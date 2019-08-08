@@ -14,4 +14,7 @@
 .idea
 local.properties
 build
-app
+app/release
+app/build
+/app/release
+/app/build

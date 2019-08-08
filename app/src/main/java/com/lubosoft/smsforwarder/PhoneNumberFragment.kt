@@ -143,7 +143,6 @@ open class PhoneNumberFragment : Fragment() {
         PermissionHandler.checkPermission(this, Manifest.permission.READ_CONTACTS) {
             when (it) {
                 CheckPermissionResult.PermissionGranted -> {
-                    // FIXME
                     // context?.toast(getString(R.string.read_contacts_permission_granted))
                 }
                 CheckPermissionResult.PermissionDisabled -> {

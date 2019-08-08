@@ -33,7 +33,7 @@ class TimeOffRuleListFragment : Fragment(), TimeOffRuleListAdapter.TimeOffRuleVi
         val itemPosition = adapter.indexOfItem(item)
         val builder = AlertDialog.Builder(requireContext())
         builder.apply {
-            setTitle(getString(R.string.delete_from_list)) // TODO ??
+            setTitle(getString(R.string.delete_from_list))
             setMessage(getString(R.string.delete_timeoff_rule_confirmation_message))
             setPositiveButton(R.string.delete_button) { _, _ ->
                 viewModel.delete(item)
@@ -84,7 +84,7 @@ class TimeOffRuleListFragment : Fragment(), TimeOffRuleListAdapter.TimeOffRuleVi
                 true
             }
             else ->  {
-                // FIXME Workaround as sometimes time-off rules list backs to time-off rule
+                // Workaround as sometimes time-off rules list backs to time-off rule
                 findNavController().navigate(R.id.target_phone_number_list_fragment)
                 true
             }

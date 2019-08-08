@@ -83,7 +83,7 @@ open class PhoneNumberListFragment : Fragment(), PhoneNumberListAdapter.PhoneNum
                 true
             }
             else ->  {
-                // FIXME Workaround as sometimes blacklist number list back to blacklist number
+                // Workaround as sometimes blacklist number list back to blacklist number
                 if (binding.isBlackList) {
                     findNavController().navigate(R.id.target_phone_number_list_fragment)
                     true

@@ -78,7 +78,6 @@ class MainActivity : AppCompatActivity() {
         PermissionHandler.checkPermission(this, Manifest.permission.RECEIVE_SMS) {
             when (it) {
                 CheckPermissionResult.PermissionGranted -> {
-                    // FIXME
                     // toast(getString(R.string.sms_permission_granted))
                 }
                 CheckPermissionResult.PermissionDisabled -> {

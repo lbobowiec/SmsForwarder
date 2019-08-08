@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">SMS Forwarder</string>
+    <string name="action_settings">Settings</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">SMS Forwarder</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="permission_required_dialog_title">Permission required</string>
+    <string name="sms_permission_explanation_dialog_message">SMS access is required for this app to forward SMS</string>
+    <string name="ok_button">OK</string>
+    <string name="delete_button">Delete</string>
+    <string name="clear_button">Clear</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="sms_permission_granted">SMS permission granted</string>
+    <string name="sms_permission_disabled">SMS permission disabled</string>
+    <string name="hint_phone">Enter number</string>
+    <string name="save_button">Save</string>
+    <string name="empty_not_saved">Phone number not saved because it is empty</string>
+    <string name="clear_phone_numbers">Clear phone numbers</string>
+    <string name="unable_to_update_phone_number">Unable to update phone number</string>
+    <string name="add_phone_number_activity_label">Add Phone Number</string>
+    <string name="deleting_phone_number">Deleting</string>
+    <string name="clearing_data">Clearing the data…</string>
+    <string name="read_contacts_permission_granted">Read Contacts permission granted</string>
+    <string name="read_contacts_permission_disabled">Read Contacts permission disabled</string>
+    <string name="contact_access_required">Contacts access is required to pick the phone number</string>
+    <string name="pickup_contact_content_description">Pickup contact</string>
+    <string name="pick_or_enter_phone_number_label">Pick or enter the phone number</string>
+    <string name="to_whom_message_label">To whom you would like to forward SMS</string>
+    <string name="empty_phone_number_error_message">Empty phone number</string>
+    <string name="contact_image">Contact\'s image</string>
+    <string name="delete_from_list">Delete from list?</string>
+    <string name="delete_phone_number_confirmation_message">This phone number will disappear from this list and no SMS
+        will be forwarded to it?
+    </string>
+    <string name="clear_target_phone_numbers_title">Clear all target phone numbers?</string>
+    <string name="clear_target_phone_numbers_confirmation">All phone numbers will be deleted and no SMS will be
+        forwarded to any device
+    </string>
+    <string name="invalid_phone_number">Invalid phone number</string>
+    <string name="target_phone_numbers_menu_item">Target Phone Numbers</string>
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_fragment_label">Settings</string>
+    <string name="target_phone_number_fragment_label">Target Phone Number</string>
+    <string name="target_phone_number_list_fragment_label">Target Phone Numbers</string>
+    <string name="main_preference_category_title">Main</string>
+    <string name="enable_sms_auto_forward_title">Enable SMS auto forward</string>
+    <string name="enable_sms_auto_forward_summary_on">SMS is automatically forwarded to target phone numbers</string>
+    <string name="enable_sms_auto_forward_summary_off">SMS is not auto forwarded</string>
+    <string name="sender_info_preference_category_title">Sender Info"</string>
+    <string name="append_contact_name_settings_title">Append Original Sender\'s Name</string>
+    <string name="append_contact_name_settings_summary">If available show the original sender\'s name on forwarded
+        messages
+    </string>
+    <string name="append_phone_number_settings_title">Append Original Sender\'s Phone</string>
+    <string name="append_phone_number_settings_summary">Show the original sender\'s phone number on forwarded messages
+    </string>
+    <string name="theme_preference_category_title">Theme</string>
+    <string name="light_dark_mode_settings_title">Enable Night mode</string>
+    <string name="light_dark_mode_settings_summary_on">Switch on to enable Night mode</string>
+    <string name="light_dark_mode_settings_summary_off">Switch off to disable Night mode</string>
+    <string name="blacklist_number_list_fragment_label">Blacklist Phone Numbers</string>
+    <string name="blacklist_number_fragment_label">BlackList Phone Number</string>
+    <string name="blacklist_numbers_menu_item">Blacklist Phone Numbers</string>
+    <string name="clear_blacklist_numbers_title">Clear all blacklist phone numbers?</string>
+    <string name="clear_blacklist_numbers_confirmation">All blacklist phone numbers will be deleted</string>
+    <string name="delete_blacklist_number_confirmation_message">This phone number will disappear from blacklist</string>
+    <string name="blacklist_message_label">SMS from this number will not be forwarded</string>
+    <string name="delete_number">Delete number</string>
+    <string name="time_offs_menu_item">Time Offs</string>
+    <string name="timeoff_rule_fragment_label">Time Off</string>
+    <string name="timeoff_rule_fragment_list_label">Time Offs</string>
+    <string name="delete_timeoff_rule_confirmation_message">This time off rule will be deleted</string>
+    <string name="clear_timeoff_rules_title">Clear all time off rules?</string>
+    <string name="clear_timeoff_rules_confirmation">All time off rules will be deleted</string>
+    <string name="when_to_disable_sms_forwarding">When to turn off SMS forwarding?</string>
+    <string name="days_of_week">Days of week</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="time_hour_minute">Time</string>
+    <string name="from_time">From:</string>
+    <string name="from_time_default_value">12:00 AM</string>
+    <string name="until">Until:</string>
+    <string name="until_time_default_value">12:00 AM</string>
+    <string name="delete_time_off">Delete Time Off</string>
+    <string name="time_off">Time Off</string>
+    <string name="pick_start_time">Pick Start Time</string>
+    <string name="pick_end_time">Pick End Time</string>
+    <string name="dont_forwad_on_text">Don\'t forward SMS on</string>
+    <string name="between_text">between</string>
+    <string name="and_text">and</string>
+    <string name="next_day_text">the next day</string>
+</resources>

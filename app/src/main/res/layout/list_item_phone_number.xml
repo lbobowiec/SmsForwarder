@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="clickListener"
+                type="android.view.View.OnClickListener"/>
+        <variable
+                name="onDeleteListener"
+                type="com.lubosoft.smsforwarder.adapters.PhoneNumberListAdapter.PhoneNumberViewHolder.OnDeleteButtonClickListener"/>
+        <variable
+                name="phoneNumberData"
+                type="com.lubosoft.smsforwarder.data.room.PhoneNumberData"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:onClick="@{clickListener}">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/contact_image"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:paddingStart="1dp"
+                    android:paddingLeft="1dp"
+                    android:paddingEnd="1dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/contact_image"
+                    tools:src="@tools:sample/avatars"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/contact_image"
+                    android:layout_toEndOf="@id/contact_image">
+
+                <TextView
+                        android:id="@+id/contactNameTextView"
+                        android:text="@{phoneNumberData.contactName}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text_view_style"
+                        android:textStyle="bold"
+                        tools:text="@tools:sample/full_names" />
+
+                <TextView
+                        android:id="@+id/phoneNumberTextView"
+                        android:text="@{phoneNumberData.phoneNumber}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text_view_style_centered"
+                        tools:text="@tools:sample/us_phones" />
+            </LinearLayout>
+
+            <ImageButton
+                    android:id="@+id/deleteItemButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_delete"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/delete_number"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:onClick="@{() -> onDeleteListener.onDeleteClick(phoneNumberData)}"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

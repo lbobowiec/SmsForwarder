@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="clickListener"
+                type="android.view.View.OnClickListener"/>
+
+        <variable
+                name="onDeleteListener"
+                type="com.lubosoft.smsforwarder.adapters.TimeOffRuleListAdapter.TimeOffRuleViewHolder.OnDeleteButtonClickListener"/>
+
+        <variable
+                name="timeOffRule"
+                type="com.lubosoft.smsforwarder.data.room.TimeOffRule"/>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:onClick="@{clickListener}">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/timeoff_rule_image"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:paddingStart="1dp"
+                    android:paddingLeft="1dp"
+                    android:paddingEnd="1dp"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/time_off"
+                    android:src="@drawable/ic_timer_off_black_24dp"
+                    tools:src="@drawable/ic_timer_off_black_24dp"
+                    android:tint="@color/colorPrimary"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"/>
+
+            <TextView
+                    android:id="@+id/timeOffRuleTextView"
+                    android:text=""
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/timeoff_rule_image"
+                    android:layout_toEndOf="@id/timeoff_rule_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/text_view_style"
+                    android:textStyle="bold"
+                    tools:text="@tools:sample/date/day_of_week"
+                    android:layout_toLeftOf="@id/deleteItemButton"
+                    android:layout_toStartOf="@id/deleteItemButton"
+            />
+
+            <ImageButton
+                    android:id="@+id/deleteItemButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_delete"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/delete_time_off"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:onClick="@{() -> onDeleteListener.onDeleteClick(timeOffRule)}"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

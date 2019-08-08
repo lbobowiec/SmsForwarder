@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="isBlackList"
+                type="boolean"/>
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+        <TextView
+                android:text="@string/pick_or_enter_phone_number_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                style="@style/text_view_style" />
+
+        <TextView
+                android:text="@{isBlackList? @string/blacklist_message_label : @string/to_whom_message_label}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+            <ImageButton
+                    android:id="@+id/pick_contact"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_contact_phone_24dp"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/pickup_contact_content_description"/>
+
+            <EditText
+                    android:id="@+id/edit_phone_number"
+                    android:hint="@string/hint_phone"
+                    android:inputType="phone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:maxLength="17"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:gravity="center_horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/save_new_phone_number_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save_button"
+                    android:layout_margin="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancel_new_phone_number_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel_button"
+                    android:layout_margin="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

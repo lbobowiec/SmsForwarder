@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+        <TextView
+                android:text="@string/when_to_disable_sms_forwarding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                style="@style/text_view_style"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+            <TextView
+                    android:text="@string/days_of_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold"
+                    android:paddingBottom="10dp"/>
+
+            <Switch
+                    android:id="@+id/monday_day_of_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/monday"
+                    android:paddingBottom="15dp"/>
+
+            <Switch
+                    android:id="@+id/tuesday_day_of_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tuesday"
+                    android:paddingBottom="15dp"/>
+
+            <Switch
+                    android:id="@+id/wednesday_day_of_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wednesday"
+                    android:paddingBottom="15dp"/>
+
+            <Switch
+                    android:id="@+id/thursday_day_of_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thursday"
+                    android:paddingBottom="15dp"/>
+
+            <Switch
+                    android:id="@+id/friday_day_of_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/friday"
+                    android:paddingBottom="15dp"/>
+
+            <Switch
+                    android:id="@+id/saturday_day_of_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saturday"
+                    android:paddingBottom="15dp"/>
+
+            <Switch
+                    android:id="@+id/sunday_day_of_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sunday"
+                    android:paddingBottom="15dp"/>
+
+        </LinearLayout>
+        
+        <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+            <TextView
+                    android:text="@string/time_hour_minute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold"
+                    android:paddingBottom="10dp"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                <TextView
+                        android:id="@+id/start_time_label_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.15"
+                        android:text="@string/from_time"
+                        android:layout_gravity="start"/>
+
+                <TextView
+                        android:id="@+id/start_time_value_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.55"
+                        android:text="@string/from_time_default_value"
+                        android:layout_gravity="start"/>
+
+                <ImageButton
+                        android:id="@+id/start_time_launch_button"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/ic_access_time_black_24dp"
+                        android:contentDescription="@string/pick_start_time"
+                        android:background="@color/colorPrimary"
+                        android:layout_gravity="end"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/end_time_label_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.15"
+                        android:text="@string/until"
+                        android:layout_gravity="start"/>
+
+                <TextView
+                        android:id="@+id/end_time_value_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.55"
+                        android:text="@string/until_time_default_value"
+                        android:layout_gravity="start"/>
+
+                <ImageButton
+                        android:id="@+id/end_time_launch_button"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/ic_access_time_black_24dp"
+                        android:contentDescription="@string/pick_end_time"
+                        android:background="@color/colorPrimary"
+                        android:layout_gravity="end"/>
+
+            </LinearLayout>
+            
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:gravity="center_horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/save_timeoff_rule_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save_button"
+                    android:layout_margin="10dp"/>
+            
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancel_timeoff_rule_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel_button"
+                    android:layout_margin="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.preference.PreferenceScreen
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+            app:key="main_preference_category"
+            app:title="@string/main_preference_category_title">
+
+        <SwitchPreferenceCompat
+                app:key="auto_forward_sms_settings"
+                app:title="@string/enable_sms_auto_forward_title"
+                app:summaryOn="@string/enable_sms_auto_forward_summary_on"
+                app:summaryOff="@string/enable_sms_auto_forward_summary_off"
+                app:defaultValue="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            app:key="sender_info_preference_category"
+            app:title="@string/sender_info_preference_category_title">
+
+        <SwitchPreferenceCompat
+                app:key="append_contact_name_settings"
+                app:title="@string/append_contact_name_settings_title"
+                app:summary="@string/append_contact_name_settings_summary"
+                app:defaultValue="true"/>
+
+        <SwitchPreferenceCompat
+                app:key="append_phone_number_settings"
+                app:title="@string/append_phone_number_settings_title"
+                app:summary="@string/append_phone_number_settings_summary"
+                app:defaultValue="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            app:key="theme_preference_category"
+            app:title="@string/theme_preference_category_title">
+
+        <SwitchPreferenceCompat
+                app:key="light_dark_mode_settings"
+                app:title="@string/light_dark_mode_settings_title"
+                app:icon="@drawable/ic_brightness_4_24dp"
+                app:summaryOn="@string/light_dark_mode_settings_summary_on"
+                app:summaryOff="@string/light_dark_mode_settings_summary_off"
+                app:defaultValue="false"/>
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

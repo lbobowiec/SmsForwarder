@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_sms_forwarder.xml"
+            app:startDestination="@+id/target_phone_number_list_fragment">
+
+    <fragment
+            android:id="@+id/target_phone_number_list_fragment"
+            android:name="com.lubosoft.smsforwarder.TargetPhoneNumberListFragment"
+            android:label="@string/target_phone_number_list_fragment_label"
+            tools:layout="@layout/fragment_target_phone_number_list">
+            <action
+                android:id="@+id/navigate_to_target_phone_number"
+                app:destination="@id/target_phone_number_fragment">
+                <argument android:name="phone_number_id" android:defaultValue="-1L"/>
+            </action>
+    </fragment>
+
+    <fragment
+            android:id="@+id/target_phone_number_fragment"
+            android:name="com.lubosoft.smsforwarder.TargetPhoneNumberFragment"
+            android:label="@string/target_phone_number_fragment_label"
+            tools:layout="@layout/fragment_target_phone_number">
+            <argument
+                android:name="phone_number_id"
+                app:argType="long"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/timeoff_rule_list_fragment"
+        android:name="com.lubosoft.smsforwarder.TimeOffRuleListFragment"
+        android:label="@string/timeoff_rule_fragment_list_label"
+        tools:layout="@layout/fragment_timeoff_rule_list">
+        <action
+            android:id="@+id/navigate_to_timeoff_rule"
+            app:destination="@id/timeoff_rule_fragment">
+            <argument android:name="timeoff_rule_id" android:defaultValue="-1L"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/timeoff_rule_fragment"
+        android:name="com.lubosoft.smsforwarder.TimeOffRuleFragment"
+        android:label="@string/timeoff_rule_fragment_label"
+        tools:layout="@layout/fragment_timeoff_rule">
+        <argument
+                android:name="timeoff_rule_id"
+                app:argType="long"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/blacklist_phone_number_list_fragment"
+            android:name="com.lubosoft.smsforwarder.BlackListPhoneNumberListFragment"
+            android:label="@string/blacklist_number_list_fragment_label"
+            tools:layout="@layout/fragment_blacklist_phone_number_list">
+        <action
+                android:id="@+id/navigate_to_blacklist_phone_number"
+                app:destination="@id/blacklist_phone_number_fragment">
+            <argument android:name="phone_number_id" android:defaultValue="-1L"/>
+        </action>
+    </fragment>
+
+    <fragment
+            android:id="@+id/blacklist_phone_number_fragment"
+            android:name="com.lubosoft.smsforwarder.BlackListPhoneNumberFragment"
+            android:label="@string/blacklist_number_fragment_label"
+            tools:layout="@layout/fragment_blacklist_phone_number">
+        <argument
+                android:name="phone_number_id"
+                app:argType="long"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.lubosoft.smsforwarder.SettingsFragment"
+        android:label="@string/settings_fragment_label">
+    </fragment>
+
+    <!-- Global action -->
+    <action
+            android:id="@+id/open_settings_fragment"
+            app:destination="@id/settings_fragment"/>
+
+</navigation>
